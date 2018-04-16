@@ -1,0 +1,216 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LaTeX book template                           %%
+%% Author:  Amber Jain (http://amberj.devio.us/) %%
+%% License: ISC license                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,11pt, oneside]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{mathptmx}
+
+% Uncomment to set page margin to 2.5 cm.
+%\usepackage[margin=2.5cm]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Source: http://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage{verbatimbox}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{pdfpages}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 'dedication' environment: To add a dedication paragraph at the start of book %
+% Source: http://www.tug.org/pipermail/texhax/2010-June/015184.html            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{dedication}
+{
+   \cleardoublepage
+   \thispagestyle{empty}
+   \vspace*{\stretch{1}}
+   \hfill\begin{minipage}[t]{0.66\textwidth}
+   \raggedright
+}
+{
+   \end{minipage}
+   \vspace*{\stretch{3}}
+   \clearpage
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter quote at the start of chapter        %
+% Source: http://tex.stackexchange.com/a/53380 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\renewcommand{\@chapapp}{}% Not necessary...
+\newenvironment{chapquote}[2][2em]
+  {\setlength{\@tempdima}{#1}%
+   \def\chapquote@author{#2}%
+   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+   \itshape}
+  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% First page of book which contains 'stuff' like: %
+%  - Book title, subtitle                         %
+%  - Book author name                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Book's title and subtitle
+\title{\Huge \textbf{Road Surface Estimator} \\ \huge Final Report}
+% Author
+\author{
+	\textsc{Thanakrit Lee}
+	\\
+	26529009
+	\\
+	tlee38@student.monash.edu
+	\\
+	Monash University
+}
+
+\begin{document}
+	
+\frontmatter
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+	\textbf{Abstract}
+\end{center}
+Abstract goes here. Less than 300 words.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer massa quam, sodales at sapien a, feugiat pretium arcu. Aliquam augue leo, viverra at scelerisque eu, auctor quis lorem. Sed leo mauris, ultricies sit amet nibh ut, cursus consequat tellus. Integer suscipit interdum nunc vel pretium. Curabitur suscipit, dolor sit amet sodales rutrum, justo leo auctor dui, quis placerat nisl sapien ut purus. Curabitur ut venenatis nulla. Nulla ipsum libero, pretium in enim sed, interdum viverra ante.
+
+Cras quam ex, venenatis id urna in, tincidunt sollicitudin ex. Suspendisse congue justo scelerisque orci varius, et facilisis odio auctor. Curabitur facilisis, orci ac tempor tempus, magna elit eleifend augue, et interdum ipsum sem in risus. Donec ex augue, mollis at enim vel, semper finibus odio. Quisque vel odio vel sapien eleifend condimentum. Pellentesque sed neque viverra, faucibus lorem tristique, mattis sem. Quisque condimentum tortor libero, quis malesuada libero sodales non.
+
+\begin{center}
+	\textbf{Keywords}
+\end{center}
+\begin{center}
+	Keyword1, Keyword2, Keyword3, Keyword4, Keyword5
+\end{center}
+
+\begin{center}
+	\textbf{Word Count}
+\end{center}
+\begin{center}
+	3000 etc.
+\end{center}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Auto-generated table of contents, list of figures and list of tables %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+
+\mainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Introduction}
+
+\section{Objective}
+
+\section{Requirements}
+
+\section{Constraints}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Background}
+
+\section{Academic Literature Review}
+
+\section{Research}
+
+\section{Datasets}
+
+\section{Risks}
+
+\section{Resource Requirements}
+
+\section{Project Tasks}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Method}
+
+\section{Internal Design}
+
+\section{Software Architecture}
+
+\section{Algorithms}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Results}
+% Analyse the OUTCOMES and QUALITY of the project.
+
+\section{Externally Observable Features}
+
+\section{Performance}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Analysis \& Discussion}
+% Analyse the statics and outputs.
+
+% If you don’t have any idea how this kind of research might be reported, look at a few research articles in the journal JASSS: http://jasss.soc.surrey.ac.uk/JASSS.html
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Future Work}
+% Include also any possible future research that might emanate from the project.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Conclusion}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{References}
+% Organise the bibliography alphabetically by first-author surname or by order of appearance in the article.
+
+%\bibliography{reference/reference}
+\bibliographystyle{apalike}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Appendices}
+
+\section{Production and Deployment}
+% Detail instructios to run/install/compile your software, with complete instructions/screenshots. Include all information such as dependencies, platform, etc.
+
+\section{Parameters}
+% GUI, input, boxes, choicecs, etc.
+
+\section{User Interface}
+% How to run the software.
+% Detail clearly the interface(s) to the Web-based project.
+
+\section{Externally Available Functions}
+% Debuggin tools, auxilliary/helper function, bonus features.
+
+\section{Internal Testing Procedures}
+% Cross-references to Test Report.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
