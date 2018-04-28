@@ -21,7 +21,7 @@
 \usepackage[english]{babel}
 \usepackage{verbatimbox}
 \usepackage{graphicx}
-\graphicspath{ {schedule/} }
+\graphicspath{ {schedule/}{diagrams/} }
 \usepackage{float}
 \usepackage{pdfpages}
 
@@ -387,8 +387,8 @@ I know that the project will be back in schedule in a week time.
 \chapter{Method}
 
 I've used the Agile software development framework methodology in developing the project software product. For each sprint (week) I make small increments to the application. The increments are the functional and non-functional requirements. As I implement the requirements to the application I test each requirements to make sure that they are working as expected.
-
-The project schedule Gantt chart does not represent the Agile development life cycle I went through, but is a good basis as a list of tasks required for the project.
+\\\\
+The project schedule Gantt chart figure does not represent the Agile development life cycle I went through, but is a good basis as a list of tasks required for the project.
 
 \section{Internal Design}
 
@@ -411,6 +411,16 @@ where
 	\item $lat$ is the latitude is the nominated square kilometre centre coordinates latitude.
 	\item $zoom$ is the current zoom level of the map.
 \end{itemize}
+After the multiplication the result is the estimated total surface area of all roads in the nominated square kilometre in square metres. To convert to square kilometres divide the result by 1000000.
+
+The activity diagram below shows the algorithm steps described above.
+
+\begin{figure}[H]
+	\begin{minipage}[b]{0.4\textwidth}
+		\includegraphics[scale=0.6]{algorithm.png}
+		\caption{The total surface area calculation algorithm.}
+	\end{minipage}
+\end{figure}
 
 
 
