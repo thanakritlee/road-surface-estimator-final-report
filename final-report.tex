@@ -17,6 +17,13 @@
 % Source: http://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+	citecolor=gray,
+}
 \usepackage{graphicx}
 \usepackage[english]{babel}
 \usepackage{verbatimbox}
@@ -356,6 +363,7 @@ To mitigate for the risk was that I accepted the risk that a new requirement was
 
 The tasks required to be done for the project are listed in the Gantt chart below.
 
+\label{Gantt_chart:1}
 \includepdf[pages={1}]{schedule/schedule-gantt-chart-1-rotated.pdf}
 
 As of writing the final report I'm behind schedule on my progress of the:
@@ -388,11 +396,33 @@ I know that the project will be back in schedule in a week time.
 
 I've used the Agile software development framework methodology in developing the project software product. For each sprint (week) I make small increments to the application. The increments are the functional and non-functional requirements. As I implement the requirements to the application I test each requirements to make sure that they are working as expected.
 \\\\
-The project schedule Gantt chart figure does not represent the Agile development life cycle I went through, but is a good basis as a list of tasks required for the project.
+The project schedule Gantt chart \hyperref[Gantt_chart:1]{figure} does not represent the Agile development life cycle I went through, but is a good basis as a list of tasks required for the project.
 
 \section{Internal Design}
 
+\begin{figure}[H]
+	\begin{minipage}[b]{0.4\textwidth}
+		\includegraphics[scale=0.4]{use_case}
+		\caption{Use Case diagram}
+	\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{minipage}[b]{0.4\textwidth}
+		\includegraphics[scale=0.4]{squence_sdiagram}
+		\caption{Sequence diagram}
+	\end{minipage}
+\end{figure}
+
 \section{Software Architecture}
+
+\begin{figure}[H]
+	\begin{minipage}[b]{0.4\textwidth}
+		\includegraphics[scale=0.6]{software_architecture}
+		\caption{Software Architecture diagram}
+	\end{minipage}
+\end{figure}
+
 
 \section{Algorithms}
 
@@ -413,9 +443,10 @@ where
 \end{itemize}
 After the multiplication the result is the estimated total surface area of all roads in the nominated square kilometre in square metres. To convert to square kilometres divide the result by 1000000.
 
-The activity diagram below shows the algorithm steps described above.
+The activity diagram (\hyperref[activity_diagram:1]{figure (3.1)}) shows the algorithm steps described above.
 
 \begin{figure}[H]
+	\label{activity_diagram:1}
 	\begin{minipage}[b]{0.4\textwidth}
 		\includegraphics[scale=0.6]{algorithm.png}
 		\caption{The total surface area calculation algorithm.}
