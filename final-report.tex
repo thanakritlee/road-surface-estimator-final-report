@@ -108,7 +108,7 @@ A server is use to do the surface area calculation by extracting road pixels fro
 	\textbf{Word Count}
 \end{center}
 \begin{center}
-	5299 words
+	5405 words
 \end{center}
 
 
@@ -539,7 +539,7 @@ The only output from this application is the result of the calculation and the e
 
 The complexity of the road surface area calculation is O$(n)$. The algorithm runs through the pixels array once, and does the area calculation afterwards. The algorithm is describe in the \hyperref[algorithm:1]{\textit{algorithm chapter}}.
 \\\\
-The performance result I've chosen to record are of the web application hosted Heroku \cite{WEBSITE_HEROKU:1} and accessed via the internet on Google Chrome \cite{WEBSITE_GOOGLE_CHROME:1} internet browser. I've chosen the remotely hosted version over a locally hosted version, because I wanted to test the application in a real world situation. The user would most likely use the application provided over the internet rather than locally installing the application and using. It's far easier to use it over the internet, since user only have to go to the application URL address in the internet browser.
+The performance result I've chosen to record are of the web application hosted Heroku \cite{WEBSITE_HEROKU:1} and accessed via the internet on Google Chrome \cite{WEBSITE_GOOGLE_CHROME:1} internet browser. I've chosen the remotely hosted version over a locally hosted version, because I wanted to test the application in a real world situation. The user would most likely use the application provided over the internet rather than locally installing the application and using. It's far easier to use it over the internet, since user only have to go to the application URL address in the internet browser. Also the performance of the web application calculation algorithm function is affected by the specifications (e.g. CPU, RAM) of the computer it is run on.
 \\\\
 \hyperref[thailand_data_graph:1]{Figure (4.1)} and \hyperref[melbourne_data_graph:1]{figure (4.2)} shows a line graph of the elapsed time of the calculation versus the total surface area of the roads. The result shows that there's a slight increase in elapsed time as the surface area increases. Generally the server calculation elapsed time is under the 0.25 seconds mark, and the overall calculation plus the network communication elapsed time is under 0.5 seconds.
 \\\\
@@ -768,29 +768,30 @@ I know that there are a lot more that I can do to the project to improve it. Thi
 
 \section{Production and Deployment}
 % Detail instructios to run/install/compile your software, with complete instructions/screenshots. Include all information such as dependencies, platform, etc.
-Install Node.js from website.
+Legend:
+\begin{itemize}
+	\item command are written in \textbf{bold} style.
+	\item file and file directory are written in \textit{italic} style.
+\end{itemize}
+Below are the instructions on how to run the web application locally on the host computer.
 \\\\
-To install the application run `npm install` at the root directory of the application. This install all node module dependencies required for running the application. All dependencies for the application can be found in the package.json file at the root directory of the application.
+Install Node.js from \url{https://nodejs.org/en/download/}.
 \\\\
-Only do the commenting out codes, if the project was taken directly from the Git Hub repository. Otherwise, skip this part.
+Install angular cli tool globally on the system using npm package manager (this command may require administrative privilege, if so put \textbf{sudo} in front of the command when using Linux system):
 \\
-In file \textit{.$\backslash$src$\backslash$app$\backslash$app-services$\backslash$area-calculation$\backslash$area-calculation.services.ts}:
+\textbf{npm install -g @angular/cli}
 \\
-comment out the line :
+or (if require admin privilege on Linux system)
 \\
-\textit{private serverApi = 'api/area$\_$calculation/';}
-\\
-and uncomment the line :
-\\
-\textit{private serverApi = 'http://localhost:8080/api/area$\_$calculation/';}
-\\
-This configuration is required to redirect application to the correct server API address.
+\textbf{sudo npm install -g @angular/cli}
 \\\\
-To run the application, it requires the client server and back end server to be run at the same time.
+To install the application run \textbf{npm install} at the root directory of the application. This install all node module dependencies required for running the application. All dependencies for the application can be found in the \textit{package.json} file at the root directory of the application.
 \\\\
-Run `node server.js` for a backend Express.JS server API.
+The application requires the client server and back end server to be run at the same time.
 \\\\
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run \textbf{node server.js} for a backend Express.JS server API.
+\\\\
+Run \textbf{ng serve} for a client server. Navigate to \textit{http://localhost:4200/} to access the web application.
 
 
 \section{User Interface}
